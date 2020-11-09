@@ -1,0 +1,123 @@
+html{
+  background-color: #f7f1e1;
+  height: auto;
+  width: auto;
+  font-family: Arial Black,Verdana,sans-serif,Arial,Helvetica;;
+}
+header{
+  border-style: solid;
+  border-width: 2px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: black;
+  border-left-color: transparent;
+}
+header > div:nth-child(1){
+  display: flex;
+}
+header > div > p{
+  width: 250px;
+  padding: 0px 10px;
+  font-family: Verdana;
+}
+header > div > p:nth-child(2){
+  text-align: right;
+  margin-right:0px;
+  margin-left: auto;
+}
+header > div ~ div{
+  font-size: 36px;
+  text-align: center;
+  padding: 5px 0px;
+}
+h4{
+  margin-bottom: 0px;
+  margin-top: 25px;
+}
+body>div:nth-child(2){
+  margin-top: 50px;
+}
+body>div:nth-child(n)>div{
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: black;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+body>div:nth-child(n)>div>p, ul{
+  margin-left: 30px;
+  font-family: Verdana;
+  font-size: 14px;
+  margin-bottom: -10px;
+}
+#tree{
+  margin-left: 30px;
+}
+#decors{
+  display: flex;
+}
+#stadium{
+  margin-top: 20px;
+  margin-left: 30px;
+  background-image: url('../images/stadium.png');
+  width: 343px;
+  height: 203px;
+  background-size: 343px;
+  background-repeat: no-repeat;
+}
+#desert{
+  margin-top: 20px;
+  margin-left: 30px;
+  background-image: url('../images/desert.png');
+  width:343px;
+  height: 203px;
+  background-size: 343px;
+  background-repeat: no-repeat;
+}
+#sky{
+  margin-top: 20px;
+  margin-left: 30px;
+  background-image: url('../images/sky.png');
+  width: 343px;
+  height: 203px;
+  background-size:343px;
+  background-repeat: no-repeat;
+}
+#autoplay{
+  margin-top: 20px;
+  margin-left: 30px;
+  background-image: url('../images/autoplay.png');
+  width: 532px;
+  height: 286px;
+  background-size: 532px;
+  background-repeat: no-repeat;
+}
+#pokemons{
+  margin-top: 20px;
+  margin-left: 30px;
+  background-image: url('../images/menu_pokemon.png');
+  width: 482px;
+  height: 255px;
+  background-size: 482px;
+  background-repeat: no-repeat;
+}
+#options{
+  margin-top: 20px;
+  margin-left: 30px;
+  background-image: url('../images/menu_options.png');
+  width: 496px;
+  height: 264px;
+  background-size: 496px;
+  background-repeat: no-repeat;
+}
+#pause{
+  margin-top: 20px;
+  margin-left: 30px;
+  background-image: url('../images/menu_pause.png');
+  width: 533px;
+  height: 263px;
+  background-size: 533px;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}

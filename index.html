@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+	<head>
+		<title>3D Pong</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" href="src/css/pong3D.css" />
+		<link rel="stylesheet" href="src/css/menu.css" />
+		<script type='text/javascript'>
+  		var menu = true;
+		</script>
+		<script type="text/javascript" src="src/lib/three.js"></script>
+    <script type="text/javascript" src="src/lib/Stats.min.js"></script>
+    <script type="text/javascript" src="src/lib/dat.gui.js"></script>
+		<script type="text/javascript" src="src/lib/TrackballControls.js"></script>
+		<script type="text/javascript" src="src/lib/threex.keyboardstate.js"></script>
+		<script type="module" src="src/js/menu/menu.js"></script>
+		<script type="text/javascript" src="src/js/fullscreen.js"></script>
+		<script type="text/javascript" src="src/js/game/playerMovement.js"></script>
+		<script type="module" src="src/js/game/pong3D.js"></script>
+	</head>
+	<body>
+		<div id="Title_menu">
+		</div>
+		<div id="one_player">
+			<div></div>
+			<div></div>
+		</div>
+		<div id="two_players">
+			<div></div>
+			<div></div>
+		</div>
+		<div id="pokemons">
+			<div></div>
+			<div></div>
+		</div>
+		<div id="options">
+			<div></div>
+			<div></div>
+		</div>
+		<div id="jouer">
+			<div></div>
+			<div></div>
+		</div>
+		<div id="retour">
+			<div></div>
+			<div></div>
+		</div>
+		<div id="screen_title">
+		</div>
+		<div id="screen_desc">
+		</div>
+		<div id="players">
+			<div id="player1_choice">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div id="player2_choice">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div id="pause">
+			<div>Pause</div>
+			<div>
+				<div id="Quitter">
+					<div></div>
+					<div>Quitter</div>
+				</div>
+				<div id="Reprendre">
+					<div></div>
+					<div>Reprendre</div>
+				</div>
+			</div>
+		</div>
+		<div id="poke_desc">
+			<div>
+				<div id="poke_image"></div>
+				<div id="poke_name"></div>
+			</div>
+			<div>
+				<div id="desc"></div>
+				<div id="power"></div>
+			</div>
+		</div>
+		<div id="options_menu">
+			<div id="options_volume">
+				<div>Volume</div>
+				<div id="sound_1" style="background-color:green"></div>
+				<div id="sound_2" style="background-color:green"></div>
+				<div id="sound_3" style="background-color:green"></div>
+				<div id="sound_4" style="background-color:yellow"></div>
+				<div id="sound_5" style="background-color:yellow"></div>
+				<div id="sound_6" style="background-color:yellow"></div>
+				<div id="sound_7" style="background-color:orange"></div>
+				<div id="sound_8" style="background-color:orange"></div>
+				<div id="sound_9" style="background-color:red"></div>
+				<div id="sound_10" style="background-color:red"></div>
+			</div>
+			<div id="options_showfps">
+				<div>Afficher les fps</div>
+				<div></div>
+			</div>
+			<div id="options_showdev">
+				<div>Afficher le menu developpeur</div>
+				<div></div>
+			</div>
+			<div id="options_terrain">
+				<div>Choisir terrain</div>
+				<div>
+					<div id="terrain_1">Stadium</div>
+					<div id="terrain_2">Desert</div>
+					<div id="terrain_3">Sky</div>
+				</div>
+			</div>
+		</div>
+		<div id="SIApp"></div>
+		<div id="dev_menu"></div>
+		<div id="player1_help">
+			<div></div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div id="player2_help">
+			<div></div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div id="player1_power">
+		</div>
+		<div id="player1_shield">
+		</div>
+		<div id="player2_power">
+		</div>
+		<div id="player2_shield">
+		</div>
+		<div id="game_message"></div>
+	</body>
+</html>

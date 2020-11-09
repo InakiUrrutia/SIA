@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+	<head>
+		<title>Rapport Pong 3D</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="rapport/css/rapport.css" />
+  </head>
+  <body>
+		<header>
+			<div>
+				<p>
+					Iñaki Urrutia
+				</p>
+				<p>
+					M1 Technologie Internet
+				</p>
+			</div>
+			<div>
+				Rapport Projet Pong 3D
+			</div>
+		</header>
+		<div>
+			<h4>Déroulement du jeu</h4>
+			<div>
+				<p>Le jeu consiste a renvoyer la balle entre deux joueurs, le jeu est jouable a 1 joueur ( contre une IA ) ou a 2 joueurs.</p>
+				<p>A chaque début de point, la balle part du centre et va vers le joueur qui a perdu le point precedent.</p>
+				<p>La balle peut se deplacer, et rebondir, sur les cotés ainsi que sur la hauteur.</p>
+				<p>Si le joueur rate la balle, un bouclier est abaissé. Si ce meme joueur rate une deuxieme fois la balle il perd le point.</p>
+				<p>Le score est affiché au dessus du terrain, le score du Joueur 1 etant a gauche et celui du Joueur 2 a droite.</p>
+				<p>Quand un des 2 joueurs atteint 3 points la partie se termine.</p>
+			</div>
+		</div>
+		<div>
+			<h4>Technologies Logicielles</h4>
+			<div>
+				<p>La construction en 3D du jeu a été faite en utilisant la bibliotheque Three.js.</p>
+				<p>L'affichage du menu developpeur se fait en utilisant la bibliotheque dat.gui.js. Cette bibliotheque permet l'affichage d'un menu déroulant en haut de l'ecran pour acceder a des parametres en plus.</p>
+				<p>L'affichage du graphique de performances se fait en utilisant la bibliotheque Stats.js</p>
+				<p>Pour ce qui est des touches d'actions (déplacements et pouvoirs) pendant la partie, la bibliotheque threex.keyboardstate.js est utilisée pour recuperer "l'etat" du clavier a n'importe quel instant (c.a.d les touches préssées).</p>
+			</div>
+		</div>
+		<div>
+			<h4>Fenetre Graphique 3D</h4>
+			<div>
+				<p>Le jeu s'adapte a differentes tailles de fenetres.</p>
+				<p>La touche 'F' permet de passer en plein ecran et d'en sortir.</p>
+			</div>
+		</div>
+		<div>
+			<h4>Architecture Logicielle</h4>
+			<div style="font-family: Verdana; font-size: 14px;">
+				<p>L'arborescence du projet est la suivante:</p>
+				<br>
+				<div id="tree">
+		      <span style="font-weight:bold">Projet_Urrutia_Inaki/</span><br>
+		      ├── <span>pong3D.html</span><br>
+					├── <span>rapport.html</span><br>
+		      ├── <span style="font-weight:bold">rapport</span><br>
+		      │&nbsp;&nbsp; ├── <span style="font-weight:bold">css</span><br>
+					│&nbsp; &nbsp;│&nbsp;&nbsp; └── <span>rapport.css</span><br>
+		      │&nbsp;&nbsp; ├── <span style="font-weight:bold">html</span><br>
+		      │&nbsp;&nbsp; └── <span style="font-weight:bold">images</span><br>
+					│&nbsp; &nbsp; &nbsp; &nbsp; └── <span>// images rapport</span><br>
+		      └── <span style="font-weight:bold">src</span><br>
+		      &nbsp;&nbsp;&nbsp; ├── <span style="font-weight:bold">css</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span>menu.css</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; └── <span>pong3D.css</span><br>
+		      &nbsp;&nbsp;&nbsp; ├── <span style="font-weight:bold">html</span><br>
+		      &nbsp;&nbsp;&nbsp; ├── <span style="font-weight:bold">js</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span style="font-weight:bold">decor</span><br>
+					&nbsp; &nbsp;&nbsp;│ &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span>desert.js</span><br>
+					&nbsp; &nbsp;&nbsp;│ &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span>sky.js</span><br>
+					&nbsp; &nbsp;&nbsp;│ &nbsp;&nbsp;│&nbsp;&nbsp; └── <span>stadium.js</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span style="font-weight:bold">game</span><br>
+					&nbsp; &nbsp;&nbsp;│ &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span>gamewalls.js</span><br>
+					&nbsp; &nbsp;&nbsp;│ &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span>playerMovement.js</span><br>
+					&nbsp; &nbsp;&nbsp;│ &nbsp;&nbsp;│&nbsp;&nbsp; └── <span>pong3D.js</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span style="font-weight:bold">menu</span><br>
+					&nbsp; &nbsp;&nbsp;│ &nbsp;&nbsp;│&nbsp;&nbsp; └── <span>menu.js</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span style="font-weight:bold">pokemons</span><br>
+					&nbsp; &nbsp;&nbsp;│ &nbsp;&nbsp;│&nbsp; &nbsp; └── <span>pokemons.js</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span>axis.js</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; └── <span>fullscreen.js</span><br>
+		      &nbsp;&nbsp;&nbsp; ├── <span style="font-weight:bold">lib</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span>dat.gui.js</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span>Stats.min.js</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span>three.js</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; ├── <span>threex.keyboardstate.js</span><br>
+					&nbsp; &nbsp;&nbsp;│&nbsp;&nbsp; └── <span>TrackballControls.js</span><br>
+		      &nbsp;&nbsp;&nbsp; └── <span style="font-weight:bold">medias</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── <span style="font-weight:bold">fonts</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; └── <span>// polices customisées</span><br>
+		      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── <span style="font-weight:bold">gui</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span>fire.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span>fly.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span>ghost.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span>grass.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span>ice.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span>psy.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span>shield.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span>thunder.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; └── <span>water.png</span><br>
+		      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── <span style="font-weight:bold">help_buttons</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span style="font-weight:bold">p1</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp; └── <span>// photos touches j1</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; └── <span style="font-weight:bold">p2</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; └── <span>// photos touches j2</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── <span style="font-weight:bold">menu</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; └── <span>// photos choix pokemons + labels menu</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── <span style="font-weight:bold">scores</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span>0.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span>1.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; ├── <span>2.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; └── <span>3.png</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── <span style="font-weight:bold">sounds</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;│&nbsp;&nbsp; └── <span>// sons pour le jeu</span><br>
+		      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── <span style="font-weight:bold">textures</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ├── <span style="font-weight:bold">skybox1</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp; └── <span>// 6 faces skybox</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ├── <span style="font-weight:bold">skybox2</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp; └── <span>// 6 faces skybox</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ├── <span style="font-weight:bold">skybox3</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp; └── <span>// 6 faces skybox</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; └── <span>// face avant et arriere des raquette pour chaque pokemon + textures de tour</span><br><br>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h4>Graphisme</h4>
+			<div>
+				<p>Differents decors sont utilisés. Ils sont accessibles dans le menu "Options" du jeu.</p>
+				<div id="decors">
+					<div id="stadium"></div>
+					<div id="desert"></div>
+					<div id="sky"></div>
+				</div>
+				<p>21 représentations differentes des personnages.</p>
+				<p>Une texture est utilisée pour la balle. Une texture pour la face avant et une pour la face arriere de la raquette des 2 joueurs. Des textures sont aussi utlisés dans certains decors.</p>
+			</div>
+		</div>
+		<div>
+			<h4>Dialogue avec l'utilisateur</h4>
+			<div>
+				<p>A chaque fois qu'un point est marqué, le compteur de point s'incremente directement. Avant le debut de chaque point, un decompte de 3 secondes est lancé et une indication sonore vient annoncer le debut du point.</p>
+				<p>La touche 'H' permet l'affichage, ou non, des touches utilisables par le joueur pendant la partie. Les touches pressées par le joueur sont vues en temps reel dans le jeu.</p>
+			</div>
+		</div>
+		<div>
+			<h4>Points de vue caméra</h4>
+			<div>
+				<p>Un seul point de vue caméra est disponible. C'est celui qui permet la meilleure lisibilité de la hauteur et des mouvements latéraux de la balle.</p>
+			</div>
+		</div>
+		<div>
+			<h4>Gestion des collisions</h4>
+			<div>
+				<p>La balle rebondit sur les bords du plateaux, autant lateralement que sur la hauteur.</p>
+				<p>Pour ce qui est du rebond sur la raquette, plus la balle frappe la gauche de la raquette, plus elle partira lateralement sur la gauche, et inversement pour la droite. Ce principe est aussi vrai sur la hauteur, ce qui permet de frapper la balle en diagonale.</p>
+				<p>La balle touche la raquette quand la position Y de la balle +/- son rayon = la position Y de la raquette +/- sa largeur.</p>
+			</div>
+		</div>
+		<div>
+			<h4>Dynamique</h4>
+			<div>
+				<p>A chaque frappe sur la raquette ( sauf utilisation de certains pouvoirs impactant la vitesse de la balle ), la vitesse de la balle augemente jusqu'a un certain seuil.</p>
+				<p>Le deplacement en hauteur et sur les cotés de la balle se fait en fonction des postions X/Z de la balle et de la raquette ainsi que de la vitesse de la balle (plus la balle est rapide plus elle est susceptible de se deplacer rapidement sur la hauteur ou les cotés).</p>
+				<p>Les raquettes des 2 joueurs sont soumises a l'inertie. L'inertie fonctionne pour les joueurs humains, cependant cela rend les deplacements de l'IA un peu particuliers et imprévisibles...</p>
+				<p>Le deplacement sur la hauteur de la balle et des raquettes sont fonctionnels.</p>
+			</div>
+		</div>
+		<div>
+			<h4>Jokers</h4>
+			<div>
+				<p>Les jokers sont propres a chaque type de personnage. Sur la séléction de personnage, les personnages sur la meme colonne disposent du meme pouvoir.</p>
+				<p>Les pouvoirs sont les suivants:</p>
+				<ul>
+					<li>Type Electrique: Reduction de la vitesse maximale du joueur adverse.</li>
+					<li>Type Feu: Acceleration de la vitesse de la balle.</li>
+					<li>Type Eau: Augementation de l'inertie de la raquette adverse.</li>
+					<li>Type Plante: Reduction de la taille de la raquette adverse.</li>
+					<li>Type Vol: Augmentation de la vitesse maximale du joueur.</li>
+					<li>Type Glace: Reduction de la vitesse de la balle.</li>
+					<li>Type Psy: Inversion des touches de deplacements du joueur adverse (la touche qui permet d'aller a droite, va deplacer la raquette a gauche. Aussi vrai pour la hauteur).</li>
+				</ul>
+				<p>Tout les types des personnages et leur pouvoir sont résumés dans le menu "Pokémons" du jeu.</p>
+				<div id="pokemons"></div>
+			</div>
+		</div>
+		<div>
+			<h4>Intelligence Artificielle de l'adversaire</h4>
+			<div>
+				<p>Une intelligence artificielle est implementée pour pouvoir jouer a 1 joueur. Sa vitesse dependra du personnage que vous lui attribuerez.</p>
+			</div>
+		</div>
+		<div>
+			<h4>Musique et sons</h4>
+			<div>
+				<p>Une musique de menu se lance au chargement de la page ( si vous autorisez l'auto-play dans le navigateur, autrement un clic sur la page dans les 1.5secondes permet le lancement de cette musique ).</p>
+				<div id="autoplay"></div>
+				<p>Un son est joué a chaque collision entre la balle et la raquette.</p>
+				<p>2 musiques de fond sont prévues durant la partie. Quand la 1ere se termine la 2e se lance.</p>
+				<p>Le volume est réglable dans le menu "Options" du jeu.</p>
+			</div>
+		</div>
+		<div>
+			<h4>Triche</h4>
+			<div>
+				<p>Touche i : mode invincible ( seulement disponible en mode 1 joueur ), la balle peut rebondir derriere la raquette du joueur sans qu'il perde.</p>
+				<p>Touche k : marque automatiquement 1 point pour le joueur principal ( seulement disponible en mode 1 joueur ).</p>
+			</div>
+		</div>
+		<div>
+			<h4>Les petits plus !</h4>
+			<div>
+				<p>Le menu principal est animé.</p>
+				<p>La navigation du menu peut se faire a la souris ou au clavier (avec les fleches et Entrée).</p>
+				<p>La console developpeur ainsi que les nombre d'images par secondes sont activables dans le menu "Options".</p>
+				<div id="options"></div>
+				<p>La console developpeur permet de:</p>
+				<ul>
+					<li>D'afficher les axes XYZ sur le terrain, ou de les masquer.</li>
+					<li>De reset la partie. Les scores sont remis a 0.</li>
+					<li>De faire en sorte que la vitesse de la balle augmente a chaque collision avec les raquettes , ou non.(Activé de base)</li>
+					<li>D'activer le controle de la camera avec la souris.</li>
+				</ul>
+				<p>Un decor parmi les 3 dispose d'une animation des objets.</p>
+				<p>Les personnages sont classés par type (colonnes) et par vitesse de deplacement (lignes).</p>
+				<p>Si vous vous etes trompés dans le choix de votre personnage, appuyer sur la touche "Echap" pour permet d'annuler votre choix et d'en faire un nouveau</p>
+				<p>Un menu de pause est disponible pendant la partie en appuyant sur la touche "Echap", qui permet, soit de Reprendre la partie, soit de Quitter la partie</p>
+				<div id="pause"></div>
+			</div>
+		</div>
+  </body>
+</html

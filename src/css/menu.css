@@ -1,0 +1,310 @@
+@font-face {
+  font-family: "Pokemon Hollow";
+	src: url('../medias/fonts/pokemon_hollow-webfont.woff2') format('woff2'),
+       url('../medias/fonts/pokemon_hollow-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: "Pokemon Solid";
+  src: url('../medias/fonts/pokemon_solid-webfont.woff2') format('woff2'),
+       url('../medias/fonts/pokemon_solid-webfont.woff') format('woff');
+}
+#screen_title{
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left:auto;
+  margin-right:auto;
+  top: 2%;
+  font-family: "Pokemon Solid";
+  color: white;
+  font-size: 70px;
+}
+#screen_desc{
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left:auto;
+  margin-right:auto;
+  top: 14%;
+  font-family: "Pokemon Solid";
+  color: white;
+  font-size: 50px;
+}
+#Title_menu{
+  background-image:url('../medias/menu/Title_menu.png');
+  width: 600px;
+  height: 150px;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  top:10%;
+}
+#one_player{
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  align-items: center;
+  top:30%;
+}
+#one_player > div:first-child{
+  background-image: url('../medias/menu/pokeball_menu.png');
+  width: 70px;
+  height: 70px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+}
+#one_player > div:last-child{
+  background-image:url('../medias/menu/1joueur.png');
+  width: 400px;
+  height: 100px;
+  background-size: 400px;
+  background-repeat: no-repeat;
+  margin-right: 0px;
+  margin-left: auto;
+}
+#two_players{
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  align-items: center;
+  top:45%;
+}
+#two_players > div:first-child{
+  background-image: url('../medias/menu/pokeball_menu.png');
+  width: 70px;
+  height: 70px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+}
+#two_players > div:last-child{
+  background-image:url('../medias/menu/2joueurs.png');
+  width: 370px;
+  height: 100px;
+  background-size: 370px;
+  background-repeat: no-repeat;
+  margin-right: 0px;
+  margin-left: auto;
+}
+#pokemons{
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  align-items: center;
+  top:60%;
+}
+#pokemons > div:first-child{
+  background-image: url('../medias/menu/pokeball_menu.png');
+  width: 70px;
+  height: 70px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+}
+#pokemons > div:last-child{
+  background-image:url('../medias/menu/pokemons.png');
+  width: 400px;
+  height: 100px;
+  background-size: 400px;
+  background-repeat: no-repeat;
+  margin-right: 0px;
+  margin-left: auto;
+}
+#options{
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  align-items: center;
+  top:75%;
+}
+#options > div:first-child{
+  background-image: url('../medias/menu/pokeball_menu.png');
+  width: 70px;
+  height: 70px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+}
+#options > div:last-child{
+  background-image:url('../medias/menu/options.png');
+  width: 400px;
+  height: 100px;
+  background-size: 400px;
+  background-repeat: no-repeat;
+  margin-right: 0px;
+  margin-left: auto;
+}
+#jouer{
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right:0%;
+  bottom: 5%;
+}
+#jouer > div:first-child{
+  background-image: url('../medias/menu/pokeball_menu.png');
+  width: 70px;
+  height: 70px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+}
+#jouer > div:last-child{
+  background-image:url('../medias/menu/jouer.png');
+  width: 330px;
+  height: 70px;
+  background-size: 330px;
+  background-repeat: no-repeat;
+}
+#retour{
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left:5%;
+  bottom: 5%;
+}
+#retour > div:first-child{
+  background-image: url('../medias/menu/pokeball_menu.png');
+  width: 70px;
+  height: 75px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+}
+#retour > div:last-child{
+  background-image:url('../medias/menu/retour.png');
+  width: 330px;
+  height: 85px;
+  background-size: 330px;
+  background-repeat: no-repeat;
+}
+#players{
+  height: 250px;
+  width: 500px;
+  position: absolute;
+  display: flex;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top:62%;
+  visibility: hidden;
+}
+#player1_choice, #player2_choice{
+  height: 250px;
+  width: 250px;
+  text-align: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+#player1_choice > div:nth-child(2), #player2_choice > div:nth-child(2){
+  width: 150px;
+  height: 150px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
+#player1_choice > div:last-child, #player1_choice > div:first-child, #player2_choice > div:first-child, #player2_choice > div:last-child{
+  font-family: "Pokemon Solid";
+  color: white;
+  font-size: 40px;
+}
+#poke_desc{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 200px;
+  width: 900px;
+  top: 60%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: "Pokemon Solid";
+  color:white;
+}
+#poke_image{
+  width: 100px;
+  height: 100px;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
+#poke_name{
+  font-size: 30px;
+}
+#desc,#power{
+  font-size: 20px;
+}
+#options_menu{
+  position: absolute;
+  font-family: "Pokemon Solid";
+  color:white;
+  font-size: 35px;
+  top: 20%;
+  width: 800px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+#options_menu > div{
+  margin-bottom: 20px;
+}
+#options_volume,#options_volume:last-child,#options_showfps,#options_showdev,#options_terrain,#options_terrain > div:last-child{
+  display: flex;
+  align-items: center;
+}
+#options_showdev > div:last-child, #options_showfps > div:last-child{
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: 0;
+}
+#options_volume > div:nth-child(n+2){
+  width: 10px;
+  height: 40px;
+  margin-left: auto;
+  margin-right : 0px;
+  border: 2px solid black;
+}
+#options_terrain > div:last-child{
+  margin-left: auto;
+  margin-right : 0px;
+}
+#options_terrain > div:last-child > div{
+  margin-left: 50px;
+}
